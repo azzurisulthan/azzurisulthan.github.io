@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #001f3f; /* Biru tua */
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #001f3f; /* Biru tua */
+}
+
+.project {
+    border: 1px solid #001f3f; /* Biru tua */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Tambahkan gaya CSS lainnya sesuai kebutuhan Anda */
