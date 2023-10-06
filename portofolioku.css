@@ -87,7 +87,7 @@ body, h1, h2, h3, p {
 #projects .card {
     margin-bottom: 20px;
     border: 2px solid grey; /* Warna garis sesuai keinginan Anda */
-    border-radius: 10px; /* Sudut lengkungan border */
+    border-radius: 5px; /* Sudut lengkungan border */
 }
 
 #projects .card-title {
