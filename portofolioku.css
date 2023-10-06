@@ -1,3 +1,4 @@
+/* (CSS yang sudah ada tetap ada di sini) */
 /* Resetting some default styles */
 body, h1, h2, h3, p {
     margin: 0;
@@ -130,5 +131,7 @@ body, h1, h2, h3, p {
   .about-me-content img {
     max-width: 350px; /* Atur lebar maksimum gambar */
     margin-right: 20px; /* Jarak antara gambar dan teks */
-    border-radius: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border-color: #555;
   }
