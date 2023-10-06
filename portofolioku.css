@@ -1,147 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Saya</title>
+/* Resetting some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: grey;
+    font-weight: bold;
+    padding-bottom: 50px;
+  }
+  
+  .navbar {
+    background-color: rgb(0, 119, 255); /* Warna biru medium */
+    color: white;
+    font-weight: bolder;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: blue; /* Warna biru medium */
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    background-color: #ffffff; /* Warna putih */
+  }
+  
+  h2 {
+    color: white; /* Warna biru medium */
+  }  
+  
+/* Section Contact Me */
+#contact {
+    margin-top: 50px;
+  }
+  
+  #contact .card-header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #contact .card-body {
+    background-color: #ffffff;
+  }
+  
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #contact form label {
+    font-weight: bold;
+  }
+  
+  #contact form button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="portofolioku.css">
-</head>
-<body>
-   <!-- Navigation Bar -->
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">Azzuri Sulthan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tentang Saya</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Proyek</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kontak</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+/* (CSS yang sudah ada tetap ada di sini) */
 
-<!-- Content -->
-<div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card" id="about-me">
-          <div class="card-body">
-            <div class="card-header">
-              <h2>Tentang Saya</h2>
-            </div>
-            <div class="about-me-content">
-              <img src="PictOfMe.jpg" alt="My Photo" class="img-thumbnail">
-              <p style="text-align: justify; font-size: larger;">Selamat datang di halaman portofolio saya. Nama lengkap saya adalah Muhammad Azzuri Sulthan Aulia Wahab,
-                saya lahir di Bandung, 21 November 2006 yang berarti usia saya saat ini hampir menyentuh 17 tahun.
-                Saya saat ini adalah seorang pelajar Kelas 11 di SMK Negeri 13 Bandung jurusan Rekayasa Perangkat Lunak.
-                Cita-cita saya adalah menjadi Full-Stack Web Developer dan harapan saya semoga suatu hari nanti saya dapat menjadi
-                CEO sebuah perusahaan yang bergerak di dunia pengembangan perangkat lunak. Jika kalian ingin lebih tau tentang saya,
-                silakan untuk contact saya pada section 'contact me' di bawah dan akan saya jawab melalui email. Sekian, terima kasih! 
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+/* Section Projects */
+#projects {
+    margin-top: 50px;
+}
 
-<!-- Section Projects -->
-<div id="projects" class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h2>My Projects</h2>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="myprojects.jpg" class="card-img-top" alt="Project 1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Project 1</h5>
-                                    <p class="card-text">Ini adalah salah satu project saya.</p>
-                                    <a href="#" class="btn btn-primary">Lihat Detail</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="myprojects.jpg" class="card-img-top" alt="Project 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Project 2</h5>
-                                    <p class="card-text">Ini adalah salah satu project saya.</p>
-                                    <a href="#" class="btn btn-primary">Lihat Detail</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img src="myprojects.jpg" class="card-img-top" alt="Project 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Project 3</h5>
-                                    <p class="card-text">Ini adalah salah satu project saya.</p>
-                                    <a href="#" class="btn btn-primary">Lihat Detail</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+#projects .card {
+    margin-bottom: 20px;
+    border: 2px solid grey; /* Warna garis sesuai keinginan Anda */
+    border-radius: 10px; /* Sudut lengkungan border */
+}
 
-  <!-- Section Contact Me -->
-  <div id="contact" class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header">
-            <h2>Contact Me</h2>
-          </div>
-          <div class="card-body">
-            <form>
-                <div class="form-group">
-                    <label for="name">Nama:</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Pesan:</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Kirim Pesan</button>    
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+#projects .card-title {
+    font-weight: bold;
+}
 
-  <!-- Bootstrap JS and Popper.js -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+#projects .card-text {
+    color: #555; /* Warna abu-abu untuk teks deskripsi */
+}
 
-</body>
-</html>
+#projects .card-header {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#projects .card-body {
+    background-color: #f8f9fa; /* Warna latar belakang abu-abu muda */
+}
+
+/* (CSS yang sudah ada tetap ada di sini) */
+
+/* Section About Me */
+#about-me {
+    margin-top: 50px;
+  }
+  
+  #about-me .card {
+    display: flex;
+    flex-direction: column; /* Tambahkan flex-direction untuk menata elemen vertikal */
+    align-items: flex-start; /* Pusatkan elemen secara horizontal */
+    text-align: left; /* Pusatkan teks */
+  }
+  
+  .about-me-content {
+    display: flex;
+    align-items: center; /* Pusatkan elemen secara vertikal */
+  }
+  
+  .about-me-content img {
+    max-width: 350px; /* Atur lebar maksimum gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    border-radius: 10px;
+  }
