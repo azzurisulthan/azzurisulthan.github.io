@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A Simple Calculator</title>
+    <link href="kalkulator.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <table border="1" cellspacing="0">
+            <tr>
+                <td colspan="4" id="inputLabel">0</td>
+            </tr>
+            <tr>
+                <td colspan="3"><button onclick="pushBtn(this);">AC</button></td>
+                <td><button onclick="pushBtn(this);">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="pushBtn(this);">7</button></td>
+                <td><button onclick="pushBtn(this);">8</button></td>
+                <td><button onclick="pushBtn(this);">9</button></td>
+                <td><button onclick="pushBtn(this);">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="pushBtn(this);">4</button></td>
+                <td><button onclick="pushBtn(this);">5</button></td>
+                <td><button onclick="pushBtn(this);">6</button></td>
+                <td><button onclick="pushBtn(this);">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="pushBtn(this);">1</button></td>
+                <td><button onclick="pushBtn(this);">2</button></td>
+                <td><button onclick="pushBtn(this);">3</button></td>
+                <td><button onclick="pushBtn(this);">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="pushBtn(this);">0</button></td>
+                <td><button onclick="pushBtn(this);">.</button></td>
+                <td><button onclick="pushBtn(this);">=</button></td>
+            </tr>
+        </table>
+    </div> 
+<script>
+    var inputLabel = document.getElementById('inputLabel');
+     
+    function pushBtn(obj) {
+         
+        var pushed = obj.innerHTML;
+         
+        if (pushed == '=') {
+            // Calculate
+            inputLabel.innerHTML = eval(inputLabel.innerHTML);
+             
+        } else if (pushed == 'AC') {
+            // All Clear
+            inputLabel.innerHTML = '0';
+             
+        } else {
+            if (inputLabel.innerHTML == '0') {
+                inputLabel.innerHTML = pushed;
+                 
+            } else {
+                inputLabel.innerHTML += pushed;   
+            }
+        }
+    }
+
+    document.addEventListener('keydown', function (event) {
+    var keyPressed = event.key;
+
+    // Check if the pressed key is a valid input for the calculator
+    var validInputs = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '+', '-', '*', '/', '=', 'Enter', 'Escape', 'Backspace'];
+
+    if (validInputs.includes(keyPressed)) {
+        if (keyPressed === 'Enter') {
+            event.preventDefault(); // Prevent the default Enter key behavior (e.g., form submission)
+            calculateResult();
+        } else if (keyPressed === 'Backspace') {
+            // Handle Backspace key
+            handleBackspace();
+        } else {
+            // Find the button with the corresponding key and trigger the click event
+            var buttons = document.querySelectorAll('button');
+            for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].innerHTML === keyPressed) {
+                    buttons[i].click();
+                    break;
+                }
+            }
+        }
+    }
+});
+
+    function handleBackspace() {
+        // Remove the last character
+        var currentExpression = inputLabel.innerHTML;
+        inputLabel.innerHTML = currentExpression.slice(0, -1);
+    }
+
+    function calculateResult() {
+        // Calculate
+        inputLabel.innerHTML = eval(inputLabel.innerHTML);
+    }
+
+</script>
+</body>
+</html>
