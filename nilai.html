@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Pengolahan Nilai</h1>
+    <form>
+        Nilai PW:<input type="number" id="nilaipw" name="nilaipw" onKeyUp="otomatis()" /><br />
+        Keterangan: 
+    </form>
+<div style="float:left;" id="nilaiart"> </div>
+<br />
+<script type="text/JavaScript">
+    
+    function otomatis() {
+        var txtnilaipw=document.getElementById("nilaipw").value;
+        var nilai;
+        if (txtnilaipw>=0 && txtnilaipw<=50) {
+            nilai = 'E';
+        } else if (txtnilaipw>=51 && txtnilaipw<=70) {
+            nilai = 'D';
+        } else if (txtnilaipw>=71 && txtnilaipw<=80) {
+            nilai = 'C';
+        } else if (txtnilaipw>=81 && txtnilaipw<=90) {
+            nilai = 'B';
+        } else if (txtnilaipw>=91 && txtnilaipw<=100) {
+            nilai = 'A';
+        } else {
+            nilai = "Masukkan angka 0-100 !"
+        }
+        document.getElementById("nilaiart").innerHTML=nilai;
+    }
+</script>
+</body>
+</html>
