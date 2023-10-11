@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* CSS styling for the first heading */
+        h3#temperatureHeading {
+            color: blue;
+            background-color: lightgray;
+        }
+
+        /* CSS styling for the second heading */
+        h3#studentsHeading {
+            color: green;
+            background-color: white;
+        }
+
+        h3 {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="temperatureHeading">1. Function merubah nilai dari suhu Celsius ke Fahrenheit</h3>
+    <script>
+    function celsiusToFahrenheit(celsius) {
+        var fahrenheit = (celsius * 9/5) + 32;
+        return fahrenheit;
+    }
+    
+    // Menggunakan input dari pengguna
+    var suhuCelsius = parseFloat(prompt("Masukkan suhu dalam Celsius:"));
+    
+    // Memastikan input adalah angka
+    if (!isNaN(suhuCelsius)) {
+        var suhuFahrenheit = celsiusToFahrenheit(suhuCelsius);
+        var temperatureHeading = document.getElementById('temperatureHeading');
+        
+        // Mengubah textContent
+        temperatureHeading.textContent = "1). " + suhuCelsius + " Celsius sama dengan " + suhuFahrenheit + " Fahrenheit";
+    } else {
+        document.write("Masukkan yang valid tidak dapat diinterpretasi sebagai suhu Celsius.");
+    }
+    </script>
+
+    <h3 id="studentsHeading">2). Array yang di dalamnya object yang objectnya terdiri dari id, nama, umur, kelas (menggunakan tipe data object)</h3>
+    <script>
+        // Membuat array dengan objek-objek di dalamnya
+        var siswaArray = [
+          { id: 1, nama: 'John', umur: 18, kelas: '12A' },
+          { id: 2, nama: 'Jane', umur: 17, kelas: '11B' },
+          { id: 3, nama: 'Doe', umur: 19, kelas: '12C' },
+        ];
+      
+        // Menampilkan data array di dalam HTML
+        document.write('<h4>Data Siswa</h4>');
+        document.write('<ul>');
+      
+        // Loop melalui array dan menampilkan informasi siswa
+        for (var i = 0; i < siswaArray.length; i++) {
+          document.write('<li>');
+          document.write('ID: ' + siswaArray[i].id + '<br>');
+          document.write('Nama: ' + siswaArray[i].nama + '<br>');
+          document.write('Umur: ' + siswaArray[i].umur + '<br>');
+          document.write('Kelas: ' + siswaArray[i].kelas + '<br>');
+          document.write('</li><br>');
+        }
+        document.write('</ul>');
+    </script>
+    
+    <h3>3. Saya sudah mengubah textcontent, dan menambahkan color dan background color</h3>
+</body>
+</html>
